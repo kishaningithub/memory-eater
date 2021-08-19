@@ -29,5 +29,18 @@ brews:
       name: homebrew-tap
     url_template: "https://github.com/kishaningithub/memory-eater/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
     folder: Formula
-    homepage: "https://github.com/kishaningithub/memory-eater"
-    description: "Eats memory at a specified constant rate"
+    homepage: https://github.com/kishaningithub/memory-eater
+    description: Eats memory at a specified constant rate
+
+nfpms:
+  -
+    id: memory-eater
+    package_name: memory-eater
+    homepage: https://github.com/kishaningithub/memory-eater
+    maintainer: Kishan B <kishancs46@gmail.com>
+    description: Eats memory at a specified constant rate
+    license: MIT
+    formats:
+      - apk
+      - deb
+      - rpm
