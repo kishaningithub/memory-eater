@@ -5,15 +5,19 @@ Eats memory at a specified constant rate
 
 ## Installation
 
+### Home brew
+
 ```shell
 $ brew install kishaningithub/tap/memory-eater
 ```
 
-## Upgrading
+### Yum
 
 ```shell
-$ brew upgrade memory-eater
+yum install https://github.com/kishaningithub/memory-eater/releases/download/v0.0.4/memory-eater_0.0.4_linux_amd64.rpm
 ```
+
+For a detailed list see [releases page](https://github.com/kishaningithub/memory-eater/releases)
 
 ## Examples
 
