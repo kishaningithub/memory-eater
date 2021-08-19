@@ -10,14 +10,14 @@ import (
 )
 
 var (
-    Version string
-	stepSize string
+	Version      string
+	stepSize     string
 	stepDuration string
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "memory-eater",
-	Short: "Eats memory at a constant rate",
+	Use:     "memory-eater",
+	Short:   "Eats memory at a constant rate",
 	Example: "memory-eater --step-size=100MB --step-duration=1s",
 	Version: Version,
 	RunE: func(cmd *cobra.Command, args []string) error {
@@ -50,5 +50,3 @@ func init() {
 	rootCmd.Flags().StringVar(&stepSize, "step-size", "1MB", "")
 	rootCmd.Flags().StringVar(&stepDuration, "step-duration", "1s", "")
 }
-
-
