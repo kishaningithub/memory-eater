@@ -23,14 +23,13 @@ builds:
       - arm64
 
 brews:
-  - name: memory-eater
-    tap:
+  - tap:
       owner: kishaningithub
       name: homebrew-tap
-    url_template: "https://github.com/kishaningithub/memory-eater/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
     folder: Formula
     homepage: https://github.com/kishaningithub/memory-eater
     description: Eats memory at a specified constant rate
+    license: MIT
 
 nfpms:
   -
