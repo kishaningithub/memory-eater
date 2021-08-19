@@ -1,11 +1,10 @@
 package cmd
 
 import (
-	"bytes"
 	"fmt"
 	"github.com/inhies/go-bytesize"
+	"github.com/kishaningithub/memory-eater/pkg/memoryeater"
 	"github.com/spf13/cobra"
-	"os"
 	"time"
 )
 
@@ -29,16 +28,8 @@ var rootCmd = &cobra.Command{
 		if err != nil {
 			return fmt.Errorf("unable to parse step duration: %w", err)
 		}
-		var buff bytes.Buffer
-		for {
-			start := time.Now().UnixNano()
-			buff.Write(bytes.Repeat([]byte{0}, int(size)))
-			end := time.Now().UnixNano()
-			durationForMemoryIncrease := end - start
-			sleepDuration := time.Duration(int64(duration) - durationForMemoryIncrease)
-			_, _ = fmt.Fprintf(os.Stderr, "\r Swallowed up %s              ", bytesize.ByteSize(buff.Len()))
-			time.Sleep(sleepDuration)
-		}
+		memoryeater.Eat(size, duration)
+		return nil
 	},
 }
 
