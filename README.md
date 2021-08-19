@@ -25,5 +25,17 @@ memory-eater --step-size=100MB --step-duration=1s
 ## Usage
 
 ```shell
+$ memory-eater -h
+Eats memory at a constant rate
 
+Usage:
+  memory-eater [flags]
+
+Examples:
+memory-eater --step-size=100MB --step-duration=1s
+
+Flags:
+  -h, --help                   help for memory-eater
+      --step-duration string    (default "1s")
+      --step-size string        (default "1MB")
 ```
