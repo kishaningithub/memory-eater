@@ -1,0 +1,33 @@
+project_name: memory-eater
+
+release:
+  github:
+    owner: kishaningithub
+    name: memory-eater
+
+before:
+  hooks:
+    - go mod download
+
+builds:
+  - main: ./main.go
+    binary: memory-eater
+    ldflags:
+      - -X github.com/kishaningithub/memory-eater/cmd.Version={{.Version}}
+    goos:
+      - windows
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+
+brews:
+  - name: memory-eater
+    tap:
+      owner: kishaningithub
+      name: homebrew-tap
+    url_template: "https://github.com/kishaningithub/memory-eater/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    folder: Formula
+    homepage: "https://github.com/kishaningithub/memory-eater"
+    description: "Eats memory at a specified constant rate"
