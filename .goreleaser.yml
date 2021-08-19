@@ -6,7 +6,7 @@ before:
 
 builds:
   - main: ./main.go
-    binary: {{.ProjectName}}
+    binary: memory-eater
     ldflags:
       - -X github.com/kishaningithub/memory-eater/cmd.Version={{.Version}}
     goos:
@@ -22,15 +22,15 @@ brews:
       owner: kishaningithub
       name: homebrew-tap
     folder: Formula
-    homepage: {{.GitURL}}
+    homepage: https://github.com/kishaningithub/memory-eater
     description: Eats memory at a specified constant rate
     license: MIT
 
 nfpms:
   -
-    id: {{.ProjectName}}
-    package_name: {{.ProjectName}}
-    homepage: https://github.com/kishaningithub/{{.ProjectName}}
+    id: memory-eater
+    package_name: memory-eater
+    homepage: https://github.com/kishaningithub/memory-eater
     maintainer: Kishan B <kishancs46@gmail.com>
     description: Eats memory at a specified constant rate
     license: MIT
