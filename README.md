@@ -26,7 +26,7 @@ memory-eater --step-size=100MB --step-duration=1s
 
 ```shell
 $ memory-eater -h
-Eats memory at a constant rate
+Eats memory at a given constant rate
 
 Usage:
   memory-eater [flags]
@@ -36,6 +36,15 @@ memory-eater --step-size=100MB --step-duration=1s
 
 Flags:
   -h, --help                   help for memory-eater
-      --step-duration string    (default "1s")
-      --step-size string        (default "1MB")
+      --profile                profile this cli tool
+      --step-duration string   Duration of every step. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h" (default "1s")
+      --step-size string       Size of memory to eat during every step. Valid byte units are "B", "KB", "MB", "GB", "TB", "PB" and "EB" (default "1MB")
 ```
+
+## Advanced examples
+
+## Profiling the utility
+
+1. To profile just add `--profile` flag to any command you want to profile
+2. To view the results run `go tool pprof -http=:1235 mem.pprof`
+3. Open url `http://localhost:1235` in your browser

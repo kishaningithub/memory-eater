@@ -18,6 +18,9 @@
 main
 memory-eater
 
+# Profile files
+*.pprof
+
 # Tools directory
 tools/*
 
