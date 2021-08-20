@@ -17,6 +17,13 @@ $ brew install kishaningithub/tap/memory-eater
 yum install -y https://github.com/kishaningithub/memory-eater/releases/download/v0.0.7/memory-eater_0.0.7_linux_amd64.rpm
 ```
 
+### Systemd
+
+Do the yum installation as above and do the following
+```shell
+curl https://raw.githubusercontent.com/kishaningithub/memory-eater/main/memory-eater.service --output /etc/systemd/system/memory-eater.service
+```
+
 For a detailed list see [releases page](https://github.com/kishaningithub/memory-eater/releases)
 
 ## Examples
