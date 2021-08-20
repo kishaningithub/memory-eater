@@ -1,0 +1,8 @@
+[Unit]
+Description=Eats memory at a specified constant rate
+
+[Service]
+Type=simple
+
+ExecStart=memory-eater --step-size=100MB --step-duration=1s
+LimitAS=1G
