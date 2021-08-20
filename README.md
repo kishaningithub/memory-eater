@@ -14,7 +14,7 @@ $ brew install kishaningithub/tap/memory-eater
 ### Yum
 
 ```shell
-yum install https://github.com/kishaningithub/memory-eater/releases/download/v0.0.4/memory-eater_0.0.4_linux_amd64.rpm
+yum install -y https://github.com/kishaningithub/memory-eater/releases/download/v0.0.7/memory-eater_0.0.7_linux_amd64.rpm
 ```
 
 For a detailed list see [releases page](https://github.com/kishaningithub/memory-eater/releases)
